@@ -1,0 +1,88 @@
+.header {
+  padding: 0 24px;
+
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 69.8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    background-color: #999;
+    width: 140px;
+    height: 40px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &-list {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      width: 90px;
+      height: 40px;
+      text-align: center;
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      line-height: 1;
+
+      // ホバー時に両方まとめて色変更
+      &:hover .nav-ja,
+      &:hover .nav-en {
+        color: #FE816A;
+      }
+
+      // 日本語・英語の共通スタイル
+      .nav-ja,
+      .nav-en {
+        font-family: "Noto Sans JP", sans-serif;
+        line-height: 1; // 100%
+        transition: color 0.3s ease;
+      }
+
+      .nav-ja {
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.12em;
+        color: #6F6F6F;
+      }
+
+      .nav-en {
+        font-size: 17px;
+        font-weight: 700;
+        color: #333333;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+
+    &-button {
+      max-width: 260px;
+      height: auto;
+      display: block;
+    }
+  }
+}
