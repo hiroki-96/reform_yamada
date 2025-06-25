@@ -14,5 +14,6 @@
  *= require_self
  */
 
- @use "top"
+ @use "top";
  @import "reset";
+ @import "components/section_label";

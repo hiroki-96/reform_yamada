@@ -1,0 +1,42 @@
+// ==============================
+// セクションラベル（共通）
+// ==============================
+
+.section-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+
+  &__en-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__mark {
+    width: 9px;
+    height: 24px;
+    background-color: #66BEFD;
+  }
+
+  &__en {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    color: #222222;
+    text-align: center;
+  }
+
+  &__ja {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.3em;
+    color: #909090;
+    text-align: center;
+  }
+}

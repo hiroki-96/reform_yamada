@@ -70,19 +70,55 @@
           <!-- ダミー画像：500×310 -->
         </div>
         <div class="concept__text-block">
-          <div class="concept__label">
-            <div class="concept__label-mark"></div> <!-- ← 水色バー -->
-            <div class="concept__label-texts">
-              <span class="concept__label-en">CONCEPT</span>
-              <span class="concept__label-ja">コンセプト</span>
-            </div>
+          <%= render partial: 'shared/section_label', locals: { en: 'CONCEPT', ja: 'コンセプト' } %>
+          
+          <div class="concept__text-box">
+            <h2 class="concept__heading">あなたの夢を形にする</h2>
+            <p class="concept__description">
+              テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力
+            </p>
           </div>
-          <h2 class="concept__heading">あなたの夢を形にする</h2>
-          <p class="concept__description">
-            テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力
-          </p>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- サービスセクション -->
+  <section class="service">
+    <div class="service__container">
+      <div class="service__heading">
+        <%= render partial: 'shared/section_label', locals: { en: 'SERVICE', ja: '目的から探す' } %>
+      </div>
+
+      <div class="service__cards">
+        <a href="#" class="service__card service__card--new">
+          <div class="service__content">
+            <p class="service__text">新築を<br>建てたい方</p>
+            <div class="service__arrow">
+              <div class="arrow-horizontal"></div>
+              <div class="arrow-diagonal"></div>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="service__card service__card--reform">
+          <div class="service__content">
+            <p class="service__text">リフォームを<br>考えている方</p>
+            <div class="service__arrow">
+              <div class="arrow-horizontal"></div>
+              <div class="arrow-diagonal"></div>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="service__card service__card--exterior">
+          <div class="service__content">
+            <p class="service__text">外構を<br>考えている方</p>
+            <div class="service__arrow">
+              <div class="arrow-horizontal"></div>
+              <div class="arrow-diagonal"></div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
