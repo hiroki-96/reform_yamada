@@ -1,2 +1,239 @@
-<h1>Pages#example</h1>
-<p>Find me in app/views/pages/example.html.erb</p>
+<%= render 'shared/header' %>
+
+<!-- パンくずナビ -->
+<section class="example-breadcrumb">
+  <div class="example-breadcrumb__container">
+    <div class="example-breadcrumb__content">
+      <a href="/">ホーム</a>
+      <span>></span>
+      <span>施工事例</span>
+    </div>
+  </div>
+</section>
+
+<!-- 施工事例一覧 -->
+<section class="example-list">
+  <div class="example-list__container">
+    <div class="example-list__grid">
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--red">新築</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--blue">リフォーム</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--green">外構</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--red">新築</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--blue">リフォーム</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--green">外構</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--red">新築</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--blue">リフォーム</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="example-card">
+        <div class="example-card__image">
+          <div class="example-card__image-placeholder"></div>
+        </div>
+        <div class="example-card__content">
+          <div class="example-card__meta">
+            <p class="example-card__location">一宮市　A様邸</p>
+            <span class="example-card__badge example-card__badge--green">外構</span>
+          </div>
+          <h3 class="example-card__title">犬と暮らす家</h3>
+          <p class="example-card__description">
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。<br>
+            全体面積は○○○坪程度です。<br>
+            愛犬と暮らしやすいように〇〇と〇〇に配慮したペットと家族にとって住みやすいプランを作成しています。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ページネーション -->
+    <div class="pagination">
+      <div class="pagination__numbers">
+        <span class="pagination__number pagination__number--active">1</span>
+        <a href="#" class="pagination__number">2</a>
+        <a href="#" class="pagination__number">3</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせセクション -->
+<section class="example-contact">
+  <div class="example-contact__container">
+    <h2 class="example-contact__title">CONTACT</h2>
+    <p class="example-contact__subtitle">家づくりに関するご相談やご質問など<br>まずはお気軽にご相談ください</p>
+    
+    <div class="example-contact__buttons">
+      <a href="/contact" class="example-contact__btn example-contact__btn--primary">
+        ✉ お問い合わせ
+      </a>
+      <a href="/contact" class="example-contact__btn example-contact__btn--secondary">
+        📄 資料請求
+      </a>
+      <a href="/contact" class="example-contact__btn example-contact__btn--tertiary">
+        🏠 来場予約
+      </a>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>

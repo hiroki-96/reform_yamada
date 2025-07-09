@@ -1,0 +1,244 @@
+// ==============================
+// 施工事例ページ
+// ==============================
+
+// パンくずナビ
+.example-breadcrumb {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__content {
+    font-size: 14px;
+    color: #666;
+
+    a {
+      color: #666;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      margin: 0 8px;
+    }
+  }
+}
+
+// 施工事例一覧
+.example-list {
+  padding: 80px 0;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+// 施工事例カード
+.example-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  &__image {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+
+    &-placeholder {
+      width: 100%;
+      height: 100%;
+      background-color: #e0e0e0;
+    }
+  }
+
+  &__content {
+    padding: 24px;
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__location {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+
+  &__badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 2px solid;
+
+    &--red {
+      border-color: #FF9D7E;
+      color: #FF9D7E;
+    }
+
+    &--blue {
+      border-color: #66BEFD;
+      color: #66BEFD;
+    }
+
+    &--green {
+      border-color: #93DE74;
+      color: #93DE74;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+  }
+}
+
+// ページネーション
+.pagination {
+  text-align: center;
+
+  &__numbers {
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__number {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 700;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: #66BEFD;
+      color: #66BEFD;
+    }
+
+    &--active {
+      background-color: #FF9D7E;
+      border-color: #FF9D7E;
+      color: #fff;
+    }
+  }
+}
+
+// お問い合わせセクション
+.example-contact {
+  padding: 80px 0;
+  background-color: #666;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 48px;
+    line-height: 1.6;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__btn {
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+
+    &--primary {
+      background-color: #FF9D7E;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(255, 157, 126, 0.3);
+
+      &:hover {
+        background-color: #FF8A6B;
+        transform: translateY(-2px) scale(1.05);
+      }
+    }
+
+    &--secondary {
+      background-color: #66BEFD;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(102, 190, 253, 0.3);
+
+      &:hover {
+        background-color: #4FA8E8;
+        transform: translateY(-2px) scale(1.05);
+      }
+    }
+
+    &--tertiary {
+      background-color: #93DE74;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(147, 222, 116, 0.3);
+
+      &:hover {
+        background-color: #7BC862;
+        transform: translateY(-2px) scale(1.05);
+      }
+    }
+  }
+}

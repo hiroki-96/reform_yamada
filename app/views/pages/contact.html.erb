@@ -1,0 +1,81 @@
+<%= render 'shared/header' %>
+
+<!-- パンくずナビ -->
+<section class="contact-breadcrumb">
+  <div class="contact-breadcrumb__container">
+    <div class="contact-breadcrumb__content">
+      <a href="/">ホーム</a>
+      <span>></span>
+      <span>お問い合わせ</span>
+    </div>
+  </div>
+</section>
+
+<!-- お問い合わせフォーム -->
+<section class="contact-form">
+  <div class="contact-form__container">
+    <div class="contact-form__header">
+      <h1 class="contact-form__title">CONTACT</h1>
+      <h2 class="contact-form__subtitle">お問い合わせ</h2>
+      <p class="contact-form__description">
+        ご不明な点などございましたら、以下のフォームにお客様情報をご記入の上<br>
+        お気軽にご相談ください。
+      </p>
+    </div>
+
+    <%= form_with url: contact_path, method: :post, local: true, class: "contact-form__form" do |form| %>
+      <div class="form-group">
+        <%= form.label :inquiry_type, "お問い合わせ種別", class: "form-label required" %>
+        <%= form.select :inquiry_type, 
+            options_for_select([
+              ["選択してください", ""],
+              ["新築について", "新築"],
+              ["リフォームについて", "リフォーム"],
+              ["外構について", "外構"],
+              ["その他", "その他"]
+            ]), 
+            { prompt: "選択してください" }, 
+            { class: "form-select" } %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :name, "お名前", class: "form-label required" %>
+        <%= form.text_field :name, class: "form-input", placeholder: "山田太郎" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :email, "メールアドレス", class: "form-label required" %>
+        <%= form.email_field :email, class: "form-input", placeholder: "example@email.com" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :phone, "電話番号", class: "form-label" %>
+        <%= form.telephone_field :phone, class: "form-input", placeholder: "090-1234-5678" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :postal_code, "郵便番号", class: "form-label required" %>
+        <%= form.text_field :postal_code, class: "form-input", placeholder: "123-4567" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :address, "住所", class: "form-label" %>
+        <%= form.text_field :address, class: "form-input", placeholder: "愛知県一宮市○○○○" %>
+      </div>
+
+      <div class="form-group form-group--large">
+        <%= form.label :message, "お問い合わせ内容", class: "form-label required" %>
+        <%= form.text_area :message, 
+            class: "form-textarea", 
+            rows: 8,
+            placeholder: "ご希望やご質問などをご記入ください。\n例）第1希望日：○月○日 ○○：○○\n　　第2希望日：○月○日 ○○：○○\n　　第3希望日：○月○日 ○○：○○" %>
+      </div>
+
+      <div class="form-submit">
+        <%= form.submit "送信", class: "form-submit__btn" %>
+      </div>
+    <% end %>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>

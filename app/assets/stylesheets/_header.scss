@@ -8,10 +8,11 @@
   &__container {
     max-width: 1440px;
     margin: 0 auto;
-    height: 69.8px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 40px;
   }
 
   &__logo {
@@ -26,20 +27,18 @@
   &__nav {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 8px;
 
     &-list {
       display: flex;
-      gap: 24px;
+      gap: 8px;
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
     &-item {
-      width: 90px;
-      height: 40px;
-      text-align: center;
+      position: relative;
     }
 
     &-link {
@@ -48,33 +47,49 @@
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      line-height: 1;
+      padding: 8px 16px;
+      border-radius: 8px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: transparent;
+      min-width: 90px;
+      height: 50px;
 
-      // ホバー時に両方まとめて色変更
-      &:hover .nav-ja,
-      &:hover .nav-en {
-        color: #FE816A;
+      &:hover {
+        transform: translateY(-2px) scale(1.05);
+
+        .nav-text {
+          .nav-ja,
+          .nav-en {
+            color: #66BEFD;
+          }
+        }
       }
 
-      // 日本語・英語の共通スタイル
-      .nav-ja,
-      .nav-en {
+      .nav-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-family: "Noto Sans JP", sans-serif;
-        line-height: 1; // 100%
-        transition: color 0.3s ease;
+        transition: all 0.3s ease;
+        color: #333;
+        line-height: 1;
       }
 
       .nav-ja {
-        font-size: 10px;
+        font-size: 9px;
         font-weight: 400;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         color: #6F6F6F;
+        transition: color 0.3s ease;
       }
 
       .nav-en {
-        font-size: 17px;
+        font-size: 14px;
         font-weight: 700;
         color: #333333;
+        margin-top: 2px;
+        transition: color 0.3s ease;
       }
     }
   }

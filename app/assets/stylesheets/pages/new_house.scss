@@ -1,0 +1,385 @@
+// ==============================
+// 新築ページ
+// ==============================
+
+// ページヒーローのバリエーション
+.page-hero--new-house {
+  background-color: #FFE5DD;
+}
+
+// イントロセクション
+.new-house-intro {
+  padding: 80px 0;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: #222;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+
+  &__image {
+    width: 500px;
+    flex-shrink: 0;
+
+    &-placeholder {
+      width: 100%;
+      height: 320px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+    }
+  }
+}
+
+// 特徴カード
+.new-house-features {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+.feature-card {
+  background-color: #FF9D7E;
+  color: #fff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  &__number {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    opacity: 0.9;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+
+// ポイントセクション
+.new-house-points {
+  padding: 80px 0;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #222;
+  }
+}
+
+.point-card {
+  margin-bottom: 80px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF9D7E;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+
+  &--reverse {
+    .point-card__content {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image {
+    width: 400px;
+    flex-shrink: 0;
+
+    &-placeholder {
+      width: 100%;
+      height: 300px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    color: #222;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+}
+
+// プランセクション
+.new-house-plan {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #222;
+  }
+}
+
+.plan-types {
+  margin-bottom: 60px;
+}
+
+.plan-card {
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 8px;
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #222;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+}
+
+.plan-options {
+  &__item {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FF9D7E;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+
+  &__image {
+    width: 500px;
+    flex-shrink: 0;
+
+    &-placeholder {
+      width: 100%;
+      height: 350px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+}
+
+.plan-dual {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+
+  &__item {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF9D7E;
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    &-placeholder {
+      width: 100%;
+      height: 250px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+    }
+  }
+}
+
+// ホームツアーセクション
+.home-tour {
+  padding: 80px 0;
+  background-color: #666;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  &__videos {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  &__video {
+    width: 500px;
+
+    &-placeholder {
+      width: 100%;
+      height: 300px;
+      background-color: #999;
+      border-radius: 8px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .play-button {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 32px;
+          top: 24px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 16px 0 16px 28px;
+          border-color: transparent transparent transparent #666;
+        }
+      }
+    }
+  }
+}
+
+// ワークスセクション（新築ページ用）
+.works--new-house {
+  background-color: #fff;
+
+  .works__section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #222;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .works__section-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .works__grid--small {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

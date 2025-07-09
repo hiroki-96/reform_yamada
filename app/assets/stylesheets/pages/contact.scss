@@ -1,0 +1,284 @@
+// ==============================
+// お問い合わせページ
+// ==============================
+
+// パンくずナビ
+.contact-breadcrumb {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__content {
+    font-size: 14px;
+    color: #666;
+
+    a {
+      color: #666;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      margin: 0 8px;
+    }
+  }
+}
+
+// お問い合わせフォーム
+.contact-form {
+  padding: 80px 0;
+  background-color: #fff;
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  &__subtitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+}
+
+// フォーム要素
+.form-group {
+  margin-bottom: 32px;
+
+  &--large {
+    margin-bottom: 40px;
+  }
+}
+
+.form-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  position: relative;
+
+  &.required::after {
+    content: "必須";
+    background-color: #FF6B6B;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+  }
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #66BEFD;
+    box-shadow: 0 0 0 3px rgba(102, 190, 253, 0.1);
+  }
+
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 60px;
+
+  &__btn {
+    background-color: #FF9D7E;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 80px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(255, 157, 126, 0.3);
+
+    &:hover {
+      background-color: #FF8A6B;
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// ==============================
+// お問い合わせ完了ページ
+// ==============================
+
+.contact-complete {
+  padding: 100px 0;
+  background-color: #f8f8f8;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__content {
+    background-color: #fff;
+    padding: 80px 60px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  &__icon {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 32px;
+    line-height: 1.4;
+  }
+
+  &__message {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 48px;
+  }
+
+  &__phone {
+    background-color: #f8f8f8;
+    padding: 32px;
+    border-radius: 12px;
+    margin-bottom: 48px;
+
+    &-label {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    &-number {
+      font-size: 28px;
+      font-weight: 700;
+      color: #66BEFD;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #4FA8E8;
+      }
+    }
+
+    &-hours {
+      font-size: 14px;
+      color: #999;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  &__btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+
+    &--primary {
+      background-color: #66BEFD;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(102, 190, 253, 0.3);
+
+      &:hover {
+        background-color: #4FA8E8;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(102, 190, 253, 0.4);
+      }
+    }
+
+    &--secondary {
+      background-color: #fff;
+      color: #666;
+      border: 2px solid #e0e0e0;
+
+      &:hover {
+        background-color: #f8f8f8;
+        border-color: #ccc;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}

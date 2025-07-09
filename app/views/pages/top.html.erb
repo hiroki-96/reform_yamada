@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>リフォームの山田 - 愛知県一宮市の新築・リフォーム・外構工事</title>
   <meta name="description" content="愛知県一宮市のリフォームの山田です。新築、リフォーム、外構工事を承っております。">
-  <link rel="stylesheet" href="<%= asset_path('top.css') %>">
+  <%= stylesheet_link_tag "pages/top", "data-turbo-track": "reload" %>
 </head>
 <body>
   <%= render 'shared/header' %>
@@ -155,5 +155,100 @@
       </div>
     </div>
   </section>
+
+  <!-- コンタクトセクション -->
+  <section class="contact">
+    <div class="contact__inner">
+      <%= render partial: 'shared/section_label', locals: { en: 'CONTACT', ja: 'お問い合わせ' } %>
+
+      <div class="contact__box">
+        <p class="contact__lead">お気軽にお問い合わせください</p>
+        <div class="contact__btn_group">
+          <a href="<%= contact_path %>" class="contact__btn" data-delay="0.1s">
+            <img src="<%= asset_path('contact/お問い合わせ.svg') %>" alt="お問い合わせアイコン" class="contact__btn-icon">
+            <span>お問い合わせ</span>
+          </a>
+          <a href="<%= contact_path %>" class="contact__btn" data-delay="0.2s">
+            <img src="<%= asset_path('contact/資料請求.svg') %>" alt="資料請求アイコン" class="contact__btn-icon">
+            <span>資料請求</span>
+          </a>
+          <a href="<%= contact_path %>" class="contact__btn" data-delay="0.3s">
+            <img src="<%= asset_path('contact/来場予約.svg') %>" alt="来場予約アイコン" class="contact__btn-icon">
+            <span>来場予約</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- カンパニーセクション -->
+  <section class="company" id="company">
+    <div class="company__inner">
+      <%= render partial: 'shared/section_label', locals: { en: 'COMPANY', ja: '会社概要' } %>
+      <div class="company__content">
+        <!-- 左側カード：会社概要・代表・経歴・資格 -->
+        <div class="company__card company__card--left">
+          <div class="company__catch">
+            <span class="company__catch-text">
+              住宅及び店舗の新築、リフォーム工事なら<br>山田株式会社
+            </span>
+          </div>
+          <div class="company__president-block">
+            <div class="company__president-photo"></div>
+            <div class="company__president-detail">
+              <h4 class="company__president-title">president</h4>
+              <div class="company__president-info">
+                <p class="company__president-position">代表取締役</p>
+                <p class="company__president-name">山田　社長</p>
+              </div>
+              <div class="company__career">
+                <div class="company__career-title">経歴</div>
+                <ul class="company__career-list">
+                  <li>・</li>
+                  <li>・</li>
+                </ul>
+              </div>
+              <div class="company__qualification">
+                <div class="company__qualification-title">保有資格</div>
+                <ul class="company__qualification-list">
+                  <li>・</li>
+                  <li>・</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 右側カード：住所・電話・地図 -->
+        <div class="company__card company__card--right">
+          <div class="company__info-block">
+            <div class="company__info-item">
+              <span class="company__info-icon">📍</span>
+              <span class="company__info-label">住所</span>
+              <span class="company__info-text">愛知県一宮市貴船1丁目3番16号</span>
+              <a href="https://maps.google.com/?q=愛知県一宮市貴船1丁目3番16号" target="_blank" class="company__info-maplink">Google マップ</a>
+            </div>
+            <div class="company__info-item">
+              <span class="company__info-icon">📞</span>
+              <span class="company__info-label">電話</span>
+              <span class="company__info-text">0120-12-3456</span>
+            </div>
+          </div>
+          <div class="company__map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.1583847652285!2d136.8054821!3d35.3051443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030bf2aff04061%3A0xb2d0ea61ebd4c0e1!2z5oSb55-l55yM5LiA5a6u5biC6LK56Ii65LiA5LiB55uu77yT55Wq5Zyw77yR77yW5Y-3!5e0!3m2!1sja!2sjp!4v1735977600000!5m2!1sja!2sjp"
+              width="526" 
+              height="359" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
   <%= render 'shared/footer' %>
 </body>

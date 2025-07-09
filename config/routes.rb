@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'exterior',    to: 'pages#exterior'   # 外構
   get 'renovation',  to: 'pages#renovation' # リフォーム
 
-  resource :contact, only: [:new, :create]  # お問い合わせ
-  get 'contact/complete', to: 'contacts#complete'  # 完了画面
+  # お問い合わせ
+  get 'contact',     to: 'pages#contact'    # お問い合わせフォーム
+  post 'contact',    to: 'pages#contact_submit' # お問い合わせ送信
+  get 'contact/complete', to: 'pages#contact_complete' # 完了画面
 end

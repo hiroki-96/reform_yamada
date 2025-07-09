@@ -7,7 +7,7 @@
     <nav class="header__nav">
       <ul class="header__nav-list">
         <li class="header__nav-item">
-          <a href="/" class="header__nav-link">
+          <a href="<%= root_path %>" class="header__nav-link">
             <span class="nav-text">
               <span class="nav-ja">ホーム</span>
               <span class="nav-en">HOME</span>
@@ -15,23 +15,31 @@
           </a>
         </li>
         <li class="header__nav-item">
-          <a href="/" class="header__nav-link">
+          <a href="<%= new_house_path %>" class="header__nav-link">
             <span class="nav-text">
-              <span class="nav-ja">コンセプト</span>
-              <span class="nav-en">CONCEPT</span>
+              <span class="nav-ja">新築</span>
+              <span class="nav-en">NEW HOUSE</span>
             </span>
           </a>
         </li>
         <li class="header__nav-item">
-          <a href="/" class="header__nav-link">
+          <a href="<%= renovation_path %>" class="header__nav-link">
             <span class="nav-text">
-              <span class="nav-ja">サービス</span>
-              <span class="nav-en">SERVICE</span>
+              <span class="nav-ja">リフォーム</span>
+              <span class="nav-en">RENOVATION</span>
             </span>
           </a>
         </li>
         <li class="header__nav-item">
-          <a href="/" class="header__nav-link">
+          <a href="<%= exterior_path %>" class="header__nav-link">
+            <span class="nav-text">
+              <span class="nav-ja">外構</span>
+              <span class="nav-en">EXTERIOR</span>
+            </span>
+          </a>
+        </li>
+        <li class="header__nav-item">
+          <a href="<%= example_path %>" class="header__nav-link">
             <span class="nav-text">
               <span class="nav-ja">施工事例</span>
               <span class="nav-en">WORKS</span>
@@ -40,7 +48,9 @@
         </li>
       </ul>
       <div class="header__contact">
-        <img src="<%= asset_path('header/contact-button.svg') %>" alt="お問い合わせボタン" class="header__contact-button">
+        <a href="<%= contact_path %>">
+          <img src="<%= asset_path('header/contact-button.svg') %>" alt="お問い合わせボタン" class="header__contact-button">
+        </a>
       </div>
     </nav>
   </div>

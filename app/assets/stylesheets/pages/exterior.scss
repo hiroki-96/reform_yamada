@@ -1,0 +1,166 @@
+// ==============================
+// 外構ページ
+// ==============================
+
+.page-hero--exterior {
+  background-color: #E8F5E8;
+}
+
+// イントロセクション
+.exterior-intro {
+  padding: 80px 0;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__image {
+    width: 400px;
+    flex-shrink: 0;
+
+    &-placeholder {
+      width: 100%;
+      height: 300px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #222;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+}
+
+// 外構サービス
+.exterior-services {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+.exterior-service-card {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  border: 3px solid #93DE74;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px) scale(1.05);
+    border-color: #7BC862;
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #222;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+  }
+}
+
+// お問い合わせボタン
+.exterior-contact {
+  padding: 60px 0;
+  background-color: #fff;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    text-align: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 20px 60px;
+    background-color: #93DE74;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(147, 222, 116, 0.3);
+
+    &:hover {
+      background-color: #7BC862;
+      transform: translateY(-2px) scale(1.05);
+    }
+  }
+}
+
+// ワークスセクション（外構ページ用）
+.works--exterior {
+  background-color: #f8f8f8;
+
+  .works__section-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #222;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .works__section-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+  }
+
+  .works__grid--small {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
