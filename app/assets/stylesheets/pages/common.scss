@@ -1,0 +1,43 @@
+// ==============================
+// 共通ページスタイル
+// ==============================
+
+// 共通ページヒーロー
+.page-hero {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 0;
+
+  &__content {
+    text-align: center;
+    color: #333;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  &__breadcrumb {
+    font-size: 14px;
+    color: #666;
+
+    a {
+      color: #666;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      margin: 0 8px;
+    }
+  }
+}

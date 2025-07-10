@@ -48,8 +48,8 @@
         </li>
       </ul>
       <div class="header__contact">
-        <a href="<%= contact_path %>">
-          <img src="<%= asset_path('header/contact-button.svg') %>" alt="お問い合わせボタン" class="header__contact-button">
+        <a href="<%= contact_path %>" class="header__contact-button">
+          <img src="<%= asset_path('header/contact-button.svg') %>" alt="お問い合わせボタン" onerror="this.style.display='none'; this.parentElement.style.backgroundImage='url(<%= asset_path('header/contact-button.svg') %>)'; this.parentElement.style.backgroundSize='contain'; this.parentElement.style.backgroundRepeat='no-repeat'; this.parentElement.style.backgroundPosition='center';">
         </a>
       </div>
     </nav>

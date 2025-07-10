@@ -1,7 +1,8 @@
 <!-- 共通セクションラベル -->
+<% mark_class ||= nil %>
 <div class="section-label">
   <div class="section-label__en-group">
-    <div class="section-label__mark"></div>
+    <div class="section-label__mark<%= " "+mark_class if mark_class.present? %>"></div>
     <span class="section-label__en"><%= en %></span>
   </div>
   <span class="section-label__ja"><%= ja %></span>

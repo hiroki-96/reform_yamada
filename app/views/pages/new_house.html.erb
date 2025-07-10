@@ -1,228 +1,203 @@
 <%= render 'shared/header' %>
 
 <!-- ヒーローセクション -->
-<section class="page-hero page-hero--new-house">
-  <div class="page-hero__content">
+<section class="page-hero page-hero--new-house fade-in from-bottom">
+  <div class="page-hero__container">
     <h1 class="page-hero__title">家づくりについて</h1>
-    <div class="page-hero__breadcrumb">
-      <a href="/">ホーム</a>
-      <span>></span>
-      <span>新築を建てたい方へ</span>
-    </div>
   </div>
 </section>
 
-<!-- メインコンテンツ -->
-<section class="new-house-intro">
-  <div class="new-house-intro__container">
-    <div class="new-house-intro__content">
-      <div class="new-house-intro__text">
-        <h2 class="new-house-intro__title">理想いっぱい納得の我が家を創る</h2>
-        <p class="new-house-intro__description">
-          テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力
-        </p>
+<!-- キャッチコピー -->
+<div class="new-house-catch fade-in from-bottom" data-delay="0.1s">
+  <div class="new-house-catch__left">
+    <div class="new-house-catch__logo-placeholder">
+      <img src="<%= asset_path 'new_house/LOOPER_logo.svg' %>" alt="LOOPERロゴ" width="400" height="90" style="display:block; width:400px; height:90px;" />
+    </div>
+    <p class="new-house-catch__text">住まいから地球の未来を考えよう</p>
+    <div class="new-house-catch__desc">
+      テキスト○○○<br>
+      〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
+    </div>
+  </div>
+  <div class="new-house-catch__right fade-in from-right" data-delay="0.2s">
+    <img src="<%= asset_path 'new_house/catch.svg' %>" alt="キャッチ画像" width="600" height="400" style="display:block;width:600px;height:400px;object-fit:cover;" />
+  </div>
+</div>
+
+<!-- 性能バッジ群 -->
+<div class="new-house-badges fade-in from-bottom" data-delay="0.2s">
+  <div class="new-house-badges__container">
+    <div class="new-house-badges__list">
+      <div class="new-house-badge stagger-fade" data-delay="0.1s">
+        <div class="new-house-badge__label new-house-badge__label--eq3">耐震等級</div>
+        <div class="new-house-badge__value new-house-badge__value--eq3">3</div>
+        <div class="new-house-badge__note new-house-badge__note--eq3">※最高等級</div>
       </div>
-      <div class="new-house-intro__image">
-        <div class="new-house-intro__image-placeholder"></div>
+      <div class="new-house-badge stagger-fade" data-delay="0.2s">
+        <div class="new-house-badge__label new-house-badge__label--solar">太陽光パネル</div>
+        <div class="new-house-badge__value new-house-badge__value--solar">10kw以上</div>
+        <div class="new-house-badge__note new-house-badge__note--solar">搭載</div>
+      </div>
+      <div class="new-house-badge stagger-fade" data-delay="0.3s">
+        <div class="new-house-badge__label new-house-badge__label--eq3">断熱等性能</div>
+        <div class="new-house-badge__value new-house-badge__value--eq3">6</div>
+        <div class="new-house-badge__note new-house-badge__note--eq3">※最高等級</div>
+      </div>
+      <div class="new-house-badge stagger-fade" data-delay="0.4s">
+        <div class="new-house-badge__label new-house-badge__label--eq3">隙間相当面積</div>
+        <div class="new-house-badge__value new-house-badge__value--eq3">C値0.5</div>
+        <div class="new-house-badge__note new-house-badge__note--eq3">以下</div>
+      </div>
+      <div class="new-house-badge stagger-fade" data-delay="0.5s">
+        <div class="new-house-badge__label new-house-badge__label--sash">樹脂サッシ</div>
+        <div class="new-house-badge__value new-house-badge__value--sash">トリプルガラス</div>
+        <div class="new-house-badge__note new-house-badge__note--sash">標準</div>
+      </div>
+      <div class="new-house-badge stagger-fade" data-delay="0.6s">
+        <div class="new-house-badge__label new-house-badge__label--airmaker">オリジナル全館<br>空調システム</div>
+        <div class="new-house-badge__value new-house-badge__value--airmaker">AIRMAKER</div>
+        <div class="new-house-badge__note new-house-badge__note--airmaker">第1種換気システム</div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- 特徴カード -->
-<section class="new-house-features">
-  <div class="new-house-features__container">
-    <div class="new-house-features__grid">
-      <div class="feature-card">
-        <div class="feature-card__number">01</div>
-        <h3 class="feature-card__title">土地探しから<br>お手伝いします</h3>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__number">02</div>
-        <h3 class="feature-card__title">フルオーダーで<br>自由な家づくり</h3>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__number">03</div>
-        <h3 class="feature-card__title">経験豊富な<br>スタッフがサポート</h3>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__number">04</div>
-        <h3 class="feature-card__title">安心の<br>長期保証</h3>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__number">05</div>
-        <h3 class="feature-card__title">アフターメンテナンス<br>も万全</h3>
-      </div>
-      <div class="feature-card">
-        <div class="feature-card__number">06</div>
-        <h3 class="feature-card__title">ローン・税金の<br>ご相談もお任せ</h3>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ポイントセクション -->
-<section class="new-house-points">
+<!-- POINTセクション -->
+<section class="new-house-points fade-in from-bottom" data-delay="0.3s">
   <div class="new-house-points__container">
-    <h2 class="new-house-points__title">POINT</h2>
-    
-    <div class="point-card">
-      <h3 class="point-card__title">POINT1</h3>
-      <div class="point-card__content">
-        <div class="point-card__image">
-          <div class="point-card__image-placeholder"></div>
+    <div class="fade-in scale-up">
+      <%= render partial: 'shared/section_label', locals: { en: 'POINT', ja: '見どころ', mark_class: 'section-label__mark--new-house' } %>
+    </div>
+    <div class="new-house-points__grid">
+      <div class="point-card stagger-fade" data-delay="0.1s">
+        <div class="point-card__number">POINT1</div>
+        <div class="point-card__image-placeholder">
+          <img src="<%= asset_path 'new_house/point1' %>" alt="ポイント1画像" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
-        <div class="point-card__text">
-          <h4 class="point-card__subtitle">安全かつ丁寧で長もちする<br>納得してくつろげる<br>家にする3箇条</h4>
-          <p class="point-card__description">
-            テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力<br><br>
-            テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力
-          </p>
+        <div class="point-card__subtitle">電気代がグッと安くなる！<br>太陽光とオール電化で<br>かしこく節約</div>
+        <div class="point-card__description">
+          片流れの大屋根で、たっぷり太陽光をキャッチ。標準の3倍もの発電量で、毎月の電気代を大幅カット！<br>
+          さらに、初期費用ゼロで始められる定額利用サービスも魅力。<br>
+          電気自動車やエコキュートとの連携で、もっと省エネ・もっとエコに暮らせます。
         </div>
       </div>
-    </div>
-
-    <div class="point-card point-card--reverse">
-      <h3 class="point-card__title">POINT2</h3>
-      <div class="point-card__content">
-        <div class="point-card__text">
-          <h4 class="point-card__subtitle">初サブタイトル例<br>〇〇での〇〇を実現</h4>
-          <p class="point-card__description">
-            テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力<br><br>
-            テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力
-          </p>
+      <div class="point-card stagger-fade" data-delay="0.2s">
+        <div class="point-card__number">POINT2</div>
+        <div class="point-card__image-placeholder">
+          <img src="<%= asset_path 'new_house/point2' %>" alt="ポイント2画像" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
-        <div class="point-card__image">
-          <div class="point-card__image-placeholder"></div>
+        <div class="point-card__subtitle">年中ずっと快適<br>エアコン1台で家じゅう空調</div>
+        <div class="point-card__description">
+          LOOPERは、全館空調システム「エアメーカー」を標準搭載。エアコン1台でおうち全体を冷暖房できるから、夏も冬も快適。<br>
+          電気代も抑えられて、家計にもカラダにもやさしい暮らしを実現します。
         </div>
       </div>
-    </div>
-
-    <div class="point-card">
-      <h3 class="point-card__title">POINT3</h3>
-      <div class="point-card__content">
-        <div class="point-card__image">
-          <div class="point-card__image-placeholder"></div>
+      <div class="point-card stagger-fade" data-delay="0.3s">
+        <div class="point-card__number">POINT3</div>
+        <div class="point-card__image-placeholder">
+          <img src="<%= asset_path 'new_house/point3' %>" alt="ポイント3画像" style="width:100%;height:100%;object-fit:cover;display:block;" />
         </div>
-        <div class="point-card__text">
-          <h4 class="point-card__subtitle">お引渡しで<br>アフターサービスが始ります</h4>
-          <p class="point-card__description">
-            テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力<br><br>
-            テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力
-          </p>
+        <div class="point-card__subtitle">3つの備えで、<br>ずっと安心な暮らしを</div>
+        <div class="point-card__description">
+          もしもの地震にも強い「耐震等級3」の安心構造。停電しても太陽光で電気が使えるから、エアコンや調理もOK。<br>
+          さらに、発電した電気を自家消費して、電気代の負担もグッと軽く。<br>
+          家全体を快適な温度に保つ高断熱性能と全館空調で、ヒートショックのリスクも減らし、健康的な毎日をサポートします。
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- プランセクション -->
-<section class="new-house-plan">
-  <div class="new-house-plan__container">
-    <h2 class="new-house-plan__title">PLAN</h2>
-    
-    <div class="plan-types">
-      <div class="plan-card">
-        <h3 class="plan-card__title">タイトル</h3>
-        <p class="plan-card__description">
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>
-          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        </p>
+<!-- PLANセクション -->
+<section class="plan-section fade-in from-bottom" data-delay="0.4s">
+  <div class="fade-in scale-up">
+    <%= render partial: 'shared/section_label', locals: { en: 'PLAN', ja: 'プラン', mark_class: 'section-label__mark--new-house' } %>
+  </div>
+  <div class="plan-section__container">
+    <!-- 2階建て -->
+    <div class="plan-section__block plan-section__block--looper fade-in from-left" data-delay="0.1s">
+      <div class="plan-section__image plan-section__image--looper">
+        <img src="<%= asset_path 'new_house/secondfloor.svg' %>" alt="2階建てプラン画像" width="900" height="560" style="width:900px;height:560px;object-fit:cover;display:block;" />
+      </div>
+      <div class="plan-section__label plan-section__label--looper">LOOPER<span>2階建て</span></div>
+      <div class="plan-section__desc plan-section__desc--looper">
+        <div class="plan-section__desc-title">タイトル</div>
+        <div class="plan-section__desc-text">テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力</div>
       </div>
     </div>
-    
-    <div class="plan-options">
-      <div class="plan-options__item">
-        <h3 class="plan-options__title">LOOPER</h3>
-        <div class="plan-options__content">
-          <div class="plan-options__image">
-            <div class="plan-options__image-placeholder"></div>
-          </div>
-          <div class="plan-options__text">
-            <h4 class="plan-options__subtitle">タイトル</h4>
-            <p class="plan-options__description">
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br><br>
-              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
-        </div>
+    <!-- 平屋 -->
+    <div class="plan-section__block plan-section__block--flat fade-in from-right" data-delay="0.2s">
+      <div class="plan-section__desc plan-section__desc--flat">
+        <div class="plan-section__desc-title">タイトル</div>
+        <div class="plan-section__desc-text">テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力テキストを入力</div>
       </div>
-      
-      <div class="plan-dual">
-        <div class="plan-dual__item">
-          <h4 class="plan-dual__title">LOOPER</h4>
-          <div class="plan-dual__image">
-            <div class="plan-dual__image-placeholder"></div>
-          </div>
-        </div>
-        <div class="plan-dual__item">
-          <h4 class="plan-dual__title">FLAT</h4>
-          <div class="plan-dual__image">
-            <div class="plan-dual__image-placeholder"></div>
-          </div>
-        </div>
+      <div class="plan-section__image plan-section__image--flat">
+        <img src="<%= asset_path 'works/ueda.svg' %>" alt="平屋プラン画像" style="width:100%;height:100%;object-fit:cover;display:block;" />
       </div>
+      <div class="plan-section__label plan-section__label--flat">LOOPER FLAT<span>平屋</span></div>
     </div>
   </div>
 </section>
 
-<!-- ホームツアーセクション -->
-<section class="home-tour">
+<!-- ルームツアー公開中！ -->
+<section class="home-tour fade-in from-bottom" data-delay="0.5s">
   <div class="home-tour__container">
-    <h2 class="home-tour__title">ホームツアー公開中！</h2>
-    <div class="home-tour__videos">
-      <div class="home-tour__video">
-        <div class="home-tour__video-placeholder">
-          <div class="play-button"></div>
-        </div>
-      </div>
-      <div class="home-tour__video">
-        <div class="home-tour__video-placeholder">
-          <div class="play-button"></div>
-        </div>
-      </div>
+    <div class="home-tour__title-wrap fade-in scale-up">
+      <div class="home-tour__title">＼ルームツアー公開中！／</div>
+    </div>
+    <div class="home-tour__main fade-in from-bottom" data-delay="0.2s">
+      <a href="https://youtu.be/iHxlVpV1Xh0?si=f-He5lrc1h6rooOd" target="_blank" rel="noopener">
+        <img src="<%= asset_path 'new_house/room_tour.png' %>" alt="ルームツアー動画サムネイル" width="1280" height="720" style="display:block;"/>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ワークスセクション -->
-<section class="works works--new-house">
+<!-- WORKSセクション -->
+<section class="works fade-in from-bottom" id="works">
   <div class="works__inner">
-    <h2 class="works__section-title">WORKS<span class="works__section-subtitle">施工事例</span></h2>
+    <div class="fade-in scale-up">
+      <%= render partial: 'shared/section_label', locals: { en: 'WORKS', ja: '施工事例', mark_class: 'section-label__mark--new-house' } %>
+    </div>
     
     <div class="works__grid">
-      <div class="works__item">
-        <div class="works__image works__image--light"></div>
+      <div class="works__item stagger-fade" data-delay="0.1s">
+        <div class="works__image works__image--light">
+          <img src="<%= asset_path 'works/ichinomiya.svg' %>" alt="一宮市A様邸" style="width:100%;height:auto;object-fit:cover;" />
+        </div>
         <div class="works__meta">
-          <p class="works__label">一宮市　A様邸</p>
+          <p class="works__label">愛知県 一宮市</p>
           <div class="works__badges">
             <span class="works__badge works__badge--red">新築</span>
           </div>
         </div>
-        <p class="works__title">写真タイトル</p>
+        <p class="works__title">愛犬と暮らす全館空調の家</p>
       </div>
 
-      <div class="works__item">
-        <div class="works__image works__image--dark"></div>
+      <div class="works__item stagger-fade" data-delay="0.2s">
+        <div class="works__image works__image--dark">
+          <img src="<%= asset_path 'works/nogata.svg' %>" alt="野方市C様邸" style="width:100%;height:auto;object-fit:cover;" />
+        </div>
         <div class="works__meta">
-          <p class="works__label">一宮市　A様邸</p>
+          <p class="works__label">福岡県 野方市</p>
           <div class="works__badges">
             <span class="works__badge works__badge--red">新築</span>
           </div>
         </div>
-        <p class="works__title">写真タイトル</p>
+        <p class="works__title">性能もデザインも妥協しない平屋</p>
       </div>
 
-      <div class="works__item">
-        <div class="works__image works__image--light"></div>
+      <div class="works__item stagger-fade" data-delay="0.3s">
+        <div class="works__image works__image--light">
+          <img src="<%= asset_path 'works/ueda.svg' %>" alt="上田市B様邸" style="width:100%;height:auto;object-fit:cover;" />
+        </div>
         <div class="works__meta">
-          <p class="works__label">一宮市　A様邸</p>
+          <p class="works__label">長野県 上田市</p>
           <div class="works__badges">
             <span class="works__badge works__badge--red">新築</span>
           </div>
         </div>
-        <p class="works__title">写真タイトル</p>
+        <p class="works__title">移住先で建てたい23坪の平屋</p>
       </div>
     </div>
   </div>

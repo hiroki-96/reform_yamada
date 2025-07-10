@@ -10,9 +10,18 @@
 
 html, body {
   height: 100%;
-  font-family: sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+// Fixed headerによる他のページのレイアウト調整
+body {
+  // トップページ以外でのヘッダー高さ分の余白を追加
+  &:not(.top-page) {
+    padding-top: 69.8px;
+  }
 }
 
 img, picture, video, canvas, svg {

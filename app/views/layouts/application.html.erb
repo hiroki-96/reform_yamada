@@ -6,11 +6,31 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="<%= controller_name == 'pages' && action_name == 'top' ? 'top-page' : 'sub-page' %>">
+    <!-- ローディング画面 -->
+    <div id="loader-wrapper" class="loader-wrapper" style="display: none; opacity: 1; visibility: visible;">
+      <div class="loader-content">
+        <div class="loader-spinner"></div>
+        <div class="loader-logo">
+          now loading
+        </div>
+      </div>
+    </div>
+    
+    <!-- スクロールインジケーター -->
+    <div class="scroll-indicator"></div>
+    
+    <div id="page-content-wrapper">
     <%= yield %>
+    </div>
   </body>
 </html>

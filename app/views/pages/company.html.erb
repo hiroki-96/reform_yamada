@@ -1,0 +1,47 @@
+<%= render 'shared/header' %>
+
+<!-- 会社情報ページ -->
+<section class="page-hero">
+  <div class="page-hero__container">
+    <h1 class="page-hero__title">COMPANY</h1>
+    <p class="page-hero__subtitle">会社情報</p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <%= render partial: 'shared/section_label', locals: { en: 'COMPANY', ja: '会社情報' } %>
+    
+    <div class="company-content">
+      <div class="company-info">
+        <h3 class="company-title">住宅及び店舗の新築、リフォーム工事なら<br>山田株式会社</h3>
+        
+        <div class="company-president">
+          <h4 class="company-president-title">president</h4>
+          <div class="company-president-info">
+            <p class="company-president-position">代表：佐藤</p>
+            <p class="company-president-message">
+              挨拶<br>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="company-details">
+        <table class="company-table">
+          <tr>
+            <th>会社名</th>
+            <td>株式会社〇〇専売会社 代表取締役 山田太郎　Google マップ</td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td>0586-12-3456</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>

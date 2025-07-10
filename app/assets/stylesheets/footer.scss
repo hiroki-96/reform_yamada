@@ -1,0 +1,139 @@
+// ==============================
+// フッターセクション
+// ==============================
+.footer {
+  background-color: #FE816A;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  // padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  // フッターのナビゲーション全体
+  &__nav {
+    width: 968px;
+    height: 16px;
+    margin-top: 139px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      width: auto;
+      padding: 0 40px; // ← 左右に余白をつける（ボーダーと文字の間）
+      text-align: center;
+      position: relative;
+
+      a {
+        display: inline-block;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      // 右のボーダー線
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 12px;
+        background-color: #fff;
+      }
+
+      // 最後のリストだけ線を表示しない
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+
+  &__sns {
+    display: flex;
+    gap: 48px;
+    margin: 32px 0 0 0;
+    a img.footer__sns-icon {
+      width: 48px;
+      height: 48px;
+      display: block;
+    }
+  }
+
+
+  &__bottom-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 8px;
+    width: 272px;
+    height: 78px;
+    margin: 0 auto;
+  }
+
+  &__logo-bg {
+    width: 98px;
+    height: 28px;
+    background-color: #999999; // グレー
+  }
+
+  &__policy {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+
+    a {
+      font-size: 12px;
+      font-weight: 400;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .divider {
+      color: #fff;
+      font-size: 10px;
+    }
+  }
+
+  &__pagetop {
+    a {
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 27px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+  }
+}

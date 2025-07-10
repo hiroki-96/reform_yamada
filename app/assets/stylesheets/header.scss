@@ -1,0 +1,137 @@
+// ==============================
+// ヘッダー（Header）
+// ==============================
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  width: 100%;
+  /* height, padding, justify-content, opacity, marginはcontainerで管理 */
+
+  &__container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    height: 69.80000305175781px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    opacity: 1;
+  }
+
+  &__logo {
+    background-color: #999;
+    width: 140px;
+    height: 40px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-list {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      position: relative;
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: transparent;
+      min-width: 90px;
+      height: 50px;
+
+      &:hover {
+        transform: translateY(-2px) scale(1.05);
+
+        .nav-text {
+          .nav-ja,
+          .nav-en {
+            color: #66BEFD;
+          }
+        }
+      }
+
+      .nav-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Noto Sans JP", sans-serif;
+        transition: all 0.3s ease;
+        color: #333;
+        line-height: 1;
+      }
+
+      .nav-ja {
+        font-size: 9px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        color: #6F6F6F;
+        transition: color 0.3s ease;
+      }
+
+      .nav-en {
+        font-size: 14px;
+        font-weight: 700;
+        color: #333333;
+        margin-top: 2px;
+        transition: color 0.3s ease;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+
+    &-button {
+      width: 260px;
+      height: 66px;
+      display: block;
+      object-fit: contain;
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease, opacity 0.3s ease; // ← ホバー時のアニメーション追加
+      // vertical-align: middle;
+      
+      // フォールバック用の背景画像設定
+      background-image: url(asset-path('header/contact-button.svg'));
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+        transform: scale(1.05); // 少し拡大
+        opacity: 0.8; // 少し透明度を下げる
+      }
+    }
+  }
+}

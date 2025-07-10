@@ -1,0 +1,125 @@
+// ローディング画面のスタイル
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+  
+  // 非表示状態
+  &[style*="display: none"] {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  
+  // 表示状態
+  &[style*="display: flex"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  // 表示時のアニメーション
+  &:not(.loaded) {
+    animation: loaderFadeIn 0.3s ease-out;
+  }
+}
+
+@keyframes loaderFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loader-content {
+  position: relative;
+  text-align: center;
+}
+
+// ロゴアニメーション
+.loader-logo {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #666;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: logoFloat 2s ease-in-out infinite;
+}
+
+// スピナーアニメーション
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f0f0f0;
+  border-top: 3px solid #66BEFD;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+// アニメーション定義
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body {
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.page-fadein {
+  animation: pageFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1 !important;
+}
+
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#page-content-wrapper {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.loading #page-content-wrapper {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+body.loaded #page-content-wrapper {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}

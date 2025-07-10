@@ -1,385 +1,820 @@
 // ==============================
-// 新築ページ
+// 共通スタイル・アニメーション
 // ==============================
 
-// ページヒーローのバリエーション
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.stagger-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in.from-bottom {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-in.from-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in.from-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in.scale-up {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.6s ease-out;
+  &.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+// ==============================
+// ヒーローセクション
+// ==============================
 .page-hero--new-house {
-  background-color: #FFE5DD;
+  background: url('/assets/new_house/hero.svg') center center/cover no-repeat;
+  width: 100vw;
+  max-width: 3751px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.page-hero__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page-hero__title {
+  width: 1440px;
+  height: 48px;
+  padding-right: 120px;
+  padding-left: 120px;
+  padding-top: 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  color: #222;
 }
 
-// イントロセクション
-.new-house-intro {
-  padding: 80px 0;
-  background-color: #fff;
+// ==============================
+// キャッチコピー
+// ==============================
+.new-house-catch {
+  width: 1440px;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 100px 120px;
+  // background: #F5F5F5;
+}
+.new-house-catch__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.new-house-catch__text {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.new-house-catch__left {
+  width: 678px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.new-house-catch__right {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 100px;
+  right: -42px;
+  margin-left: 0;
+}
+.new-house-catch__logo-placeholder {
+  width: 400px;
+  height: 90px;
+  margin-bottom: 32px;
+}
+.new-house-catch__desc {
+  width: 675px;
+  height: 210px;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 2;
+  color: #222;
+}
 
+// ==============================
+// 性能バッジ群
+// ==============================
+.new-house-badges {
+  background: #EDEEF0;
+  width: 100%;
+  padding: 140px 0;
+  display: flex;
+  justify-content: center;
   &__container {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  &__content {
     display: flex;
-    align-items: center;
-    gap: 60px;
+    justify-content: center;
+  }
+  &__list {
+    display: flex;
+    gap: 39px;
+  }
+}
+.new-house-badge {
+  background: #FE816A;
+  border-radius: 16px;
+  width: 166px;
+  height: 166px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  &__label {
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+    white-space: pre-line;
+  }
+  &__value {
+    font-size: 40px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  &__note {
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+}
+.new-house-badge__label--small {
+  font-size: 12px;
+}
+.new-house-badge__label--medium {
+  font-size: 16px;
+  }
+.new-house-badge__label--large {
+  font-size: 20px;
+}
+
+.new-house-badge__value--small {
+  font-size: 24px;
+}
+.new-house-badge__value--medium {
+  font-size: 32px;
+}
+.new-house-badge__value--large {
+  font-size: 40px;
+}
+
+.new-house-badge__note--small {
+  font-size: 10px;
+}
+.new-house-badge__note--medium {
+  font-size: 14px;
+    }
+.new-house-badge__note--large {
+  font-size: 18px;
+}
+
+.new-house-badge__label--solar {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+  }
+.new-house-badge__value--solar {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+  }
+.new-house-badge__note--solar {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.new-house-badge__label--eq3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.new-house-badge__value--eq3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.new-house-badge__note--eq3 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
   }
 
-  &__text {
-    flex: 1;
+.new-house-badge__label--sash {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.new-house-badge__value--sash {
+  font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+  font-size: 19px;
+  line-height: 1;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.new-house-badge__note--sash {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
   }
 
+.new-house-badge__label--airmaker {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+.new-house-badge__value--airmaker {
+  font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+  font-size: 19px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+  }
+.new-house-badge__note--airmaker {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+// ==============================
+// POINTセクション
+// ==============================
+.new-house-points {
+  background: #fff;
+  width: 100%;
+  padding: 100px 0;
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px;
+  }
   &__title {
     font-size: 32px;
     font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 24px;
     color: #222;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 8px;
+    .new-house-points__subtitle {
+      display: block;
+      font-size: 14px;
+      color: #909090;
+      letter-spacing: 0.3em;
+      font-weight: 400;
+      margin-top: 8px;
   }
-
+}
+  &__grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+.point-card {
+  background: #D9D9D9;
+  border-radius: 24px;
+  width: 413px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  box-sizing: border-box;
+  &__number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+    }
+  &__image-placeholder {
+      width: 100%;
+    height: 200px;
+    border-radius: 16px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    line-height: 1.5;
+  }
   &__description {
     font-size: 16px;
+    color: #222;
+    text-align: left;
     line-height: 1.8;
-    color: #666;
-  }
-
-  &__image {
-    width: 500px;
-    flex-shrink: 0;
-
-    &-placeholder {
-      width: 100%;
-      height: 320px;
-      background-color: #e0e0e0;
-      border-radius: 8px;
-    }
   }
 }
 
-// 特徴カード
-.new-house-features {
-  padding: 80px 0;
-  background-color: #f8f8f8;
+// ==============================
+// PLANセクション
+// ==============================
+.plan-section {
+  width: 1440px;
+  height: 1572px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 
   &__container {
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__block {
+    display: flex;
+    width: 1440px;
+    height: 615px;
+    position: relative;
+    align-items: flex-end;
+    &--flat {
+      height: 618px;
+    }
+  }
+
+  // 2階建て（左画像・右説明）
+  &__image--looper {
+    width: 900px;
+    height: 560px;
+    background: #D9D9D9;
+    box-shadow: 8px 8px 16px #0002;
+    border-radius: 0;
+  }
+  &__desc--looper {
+    width: 660px;
+    height: 433px;
+    background: #AAAAAA;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+  }
+
+  // 平屋（左説明・右画像）
+  &__desc--flat {
+    width: 660px;
+    height: 433px;
+    background: #AAAAAA;
+    border-radius: 24px;
+    padding: 80px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 2;
+  }
+  &__image--flat {
+    position: relative;
+    left: 540px;
+    width: 900px;
+    height: 560px;
+    box-shadow: 8px 8px 16px #0002;
+    border-radius: 0;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 0;
+    bottom: -55px;
+    font-size: 32px;
+    font-weight: bold;
+    z-index: 3;
+    width: auto;
+    text-align: left;
+    &--flat {
+      left: auto;
+      right: 0;
+      bottom: -55px;
+      text-align: right;
+      width: auto;
+    }
+    span {
+      position: absolute;
+      left: 50%;
+      bottom: -24px;
+      transform: translateX(-50%);
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 4px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+}
+.plan-section__block--flat {
+  position: relative;
+  height: 618px;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+.plan-section__desc--flat {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 660px;
+  height: 433px;
+  background: #AAAAAA;
+  border-radius: 24px;
+  padding: 80px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+}
+.plan-section__image--flat {
+  position: relative;
+  left: 540px;
+  width: 900px;
+  height: 615px;
+  background: #D9D9D9;
+  box-shadow: 8px 8px 16px #0002;
+  border-radius: 0;
+  z-index: 1;
+}
+.plan-section__label {
+  position: absolute;
+  left: 0;
+  bottom: -16px; // 下部に半分かかるように調整
+  font-size: 32px;
+  font-weight: bold;
+  z-index: 3;
+  width: auto;
+  text-align: left;
+  &--flat {
+    left: auto;
+    right: 0;
+    bottom: -16px; // 下部に半分かかるように調整
+    text-align: right;
+    width: auto;
+  }
+  span {
+    position: absolute;
+    left: 50%;
+    bottom: -24px;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+.plan-section__block--looper {
+  position: relative;
+}
+.plan-section__image--looper {
+  position: relative;
+  z-index: 1;
+}
+.plan-section__desc--looper {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  /* 画像のtopから80px下げる */
+  top: 0;
+  transform: translateY(80px);
+}
+.plan-section > .section-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto 40px auto;
+}
+
+// ==============================
+// ルームツアー
+// ==============================
+.home-tour {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  height: 998px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.home-tour__container {
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  aspect-ratio: 16/9;
+  padding: 90px 0;
+  background: #6F6F6F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 900px) {
+  .home-tour__container {
+    padding: 40px 0;
+  }
+}
+.home-tour__title-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home-tour__title {
+  width: 424px;
+  aspect-ratio: 424/38;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 600px) {
+  .home-tour__title {
+    width: 90vw;
+    font-size: 20px;
+  }
+}
+.home-tour__main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  a {
+    display: block;
+    width: 60%;
     margin: 0 auto;
-    padding: 0 40px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    display: block;
+  }
+}
+.home-tour__main img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.home-tour__main img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+// ==============================
+// ワークス（Works）セクション
+// ==============================
+.works {
+  background-color: #fff;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-  }
-}
-
-.feature-card {
-  background-color: #FF9D7E;
-  color: #fff;
-  padding: 40px 30px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-2px) scale(1.05);
-  }
-
-  &__number {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    opacity: 0.9;
-  }
-
-  &__title {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.5;
-  }
-}
-
-// ポイントセクション
-.new-house-points {
-  padding: 80px 0;
-  background-color: #fff;
-
-  &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  &__title {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 60px;
-    color: #222;
-  }
-}
-
-.point-card {
-  margin-bottom: 80px;
-
-  &__title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #FF9D7E;
-    margin-bottom: 40px;
-  }
-
-  &__content {
+    width: 100%;
     display: flex;
-    gap: 60px;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
   }
-
-  &--reverse {
-    .point-card__content {
-      flex-direction: row-reverse;
-    }
-  }
-
-  &__image {
-    width: 400px;
-    flex-shrink: 0;
-
-    &-placeholder {
-      width: 100%;
-      height: 300px;
-      background-color: #e0e0e0;
-      border-radius: 8px;
-    }
-  }
-
-  &__text {
-    flex: 1;
-  }
-
-  &__subtitle {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin-bottom: 24px;
-    color: #222;
-  }
-
-  &__description {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666;
-  }
-}
-
-// プランセクション
-.new-house-plan {
-  padding: 80px 0;
-  background-color: #f8f8f8;
-
-  &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  &__title {
-    font-size: 48px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 60px;
-    color: #222;
-  }
-}
-
-.plan-types {
-  margin-bottom: 60px;
-}
-
-.plan-card {
-  background-color: #fff;
-  padding: 60px;
-  border-radius: 8px;
-
-  &__title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 24px;
-    color: #222;
-  }
-
-  &__description {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666;
-  }
-}
-
-.plan-options {
-  &__item {
-    margin-bottom: 60px;
-  }
-
-  &__title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #FF9D7E;
-    margin-bottom: 40px;
-  }
-
-  &__content {
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
-  }
-
-  &__image {
-    width: 500px;
-    flex-shrink: 0;
-
-    &-placeholder {
-      width: 100%;
-      height: 350px;
-      background-color: #e0e0e0;
-      border-radius: 8px;
-    }
-  }
-
-  &__text {
-    flex: 1;
-  }
-
-  &__subtitle {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #222;
-  }
-
-  &__description {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #666;
-  }
-}
-
-.plan-dual {
-  display: flex;
-  gap: 40px;
-  margin-top: 60px;
 
   &__item {
-    flex: 1;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    text-align: center;
+    width: 33.3333%;
+    min-width: 220px;
+    max-width: 480px;
+    height: 451px;
+    margin-bottom: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
   }
-
-  &__title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #FF9D7E;
-    margin-bottom: 24px;
+  @media (max-width: 1200px) {
+    .works__item {
+      width: 25%;
+    }
+  }
+  // @media (max-width: 900px) {
+  //   .works__item {
+  //     width: 20%;
+  //   }
+  // }
+  @media (max-width: 767px) {
+    .works__item {
+      width: 50%;
+      max-width: none;
+    }
   }
 
   &__image {
-    &-placeholder {
       width: 100%;
-      height: 250px;
-      background-color: #e0e0e0;
-      border-radius: 8px;
+    aspect-ratio: 16/9;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+
+    &--light {
+      background-color: #d3d3d3;
+  }
+
+    &--dark {
+      background-color: #a9a9a9;
     }
   }
-}
 
-// ホームツアーセクション
-.home-tour {
-  padding: 80px 0;
-  background-color: #666;
-
-  &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  &__title {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 40px;
-  }
-
-  &__videos {
+  &__meta {
+    width: 100%;
     display: flex;
-    gap: 40px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center; // ← ★これを追加
+    margin: 16px 0;
+    padding: 0 24px;
+    font-size: 14px;
+    color: #000;
   }
 
-  &__video {
-    width: 500px;
-
-    &-placeholder {
-      width: 100%;
-      height: 300px;
-      background-color: #999;
-      border-radius: 8px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .play-button {
-        width: 80px;
-        height: 80px;
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 50%;
-        position: relative;
-
-        &::after {
-          content: '';
-          position: absolute;
-          left: 32px;
-          top: 24px;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 16px 0 16px 28px;
-          border-color: transparent transparent transparent #666;
-        }
-      }
-    }
-  }
-}
-
-// ワークスセクション（新築ページ用）
-.works--new-house {
-  background-color: #fff;
-
-  .works__section-title {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #222;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .works__section-subtitle {
-    font-size: 16px;
+  &__label {
+    font-family: Noto Sans JP;
     font-weight: 400;
-    color: #666;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 20%;
+    text-align: center;
   }
 
-  .works__grid--small {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+  &__title {
+  font-family: Noto Sans JP;
+    font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 20%;
+  color: #222222;
+  }
+
+
+  &__badge {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 7px 13px;
+    border: 2px solid;
+    text-align: center;
+
+    &--red {
+      border-color: #FE816A;
+      color: #FE816A;
+  }
   }
 }
